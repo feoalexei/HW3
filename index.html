@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Christmas Tree</title>
+</head>
+<body>
+    <script>
+        
+        var tree = '';
+        var height = +prompt('Enter the height of the tree');
+      
+        //counting lines, i.e. height of the tree
+        for (var line = 0; line < height; line++) {
+       
+        //counting empty spaces
+            for (var space = 1; space < height - line; space++) {
+                tree += ' ';     
+            }
+        //counting stars
+            for (var star = 1; star <= (line + 1); star++) {
+
+                if (line % 2 == 0) {
+                    tree += '* ';
+                } else {
+                    tree += 'o ';
+                }  
+            }
+            
+            tree += '\n';
+        }
+
+        alert(tree);
+
+    </script>
+</body>
+</html>
